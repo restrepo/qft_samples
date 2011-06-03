@@ -2,11 +2,14 @@ Samples of full calculation of processes in Quantum Field Theory
 
 How to contribute. 
 
-* Set up your git account. 
+* Set up your http://github.com account. 
 * Get the LaTeX code:
  $ git clone git@github.com:rescolo/qft_samples.git
  $ cd qft_samples
  $ git add yourfile.tex
+* Be sure to have the last version of the code before commit your changes:
+ $ git pull
+* commit your changes:
  $ git commit -a -m "Describe your changes"
 
 * Request to diego.restrepo AT gmail.com to be added to the qft_samples repositoty as collaborator. When get the approval:
