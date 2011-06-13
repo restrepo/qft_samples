@@ -1,13 +1,36 @@
-\chapter{Calculation sample}
+\chapter{Calculation sample of the singlet scalar dark matter}
 
 Author: Isabel Andrade
 
-Description of the processes to be calculated
+Description of the processes to be calculated: we consider the lagrangian that describes the singlet scalar model of dark matter and we choose the direct annihilation of two scalar fields of two bosons Higgs.
 
 The Figures must be in PDF and included in the directory: \verb|figures|.
 
 \section{Lagrangian}
-Relevant Lagrangian terms.
+
+Of the lagrangian that describes the singlet scalar model of dark matter:
+
+\begin{equation}
+\mathcal{L}=\mathcal{L}_s_m + \frac{1}{2} \partial_\mu S\partial^\mu S -\frac{m_0 ^2}{2} S^2 - \frac{\lambda_s}{4} S^4 - \lambda S^2H^\dagger H
+\end{equation}
+
+where H is the higgs doublet, and S is the singlet scalar field.
+
+take the lagrangian of interaction
+
+\begin{equation}
+\mathcal{L}^{int} = - \lambda S^2 H^\dagger H
+\end{equation}
+
+where $H$ is scalar doublet
+
+\begin{equation}
+H=\begin{bmatrix}{0}\\{\frac{h+\mathfrak{v}}{\sqrt{2}}}\end{bmatrix}
+\end{equation}
+
+\begin{equation}
+\mathcal{L}^{int}= - \lambda S^2 \begin{bmatrix}{0}&{\frac{h+\mathfrak{v}}{\sqrt{2}}}\end{bmatrix} \begin{bmatrix}{0}\\{\frac{h+\mathfrak{v}}{\sqrt{2}}}\end{bmatrix}
+\end{equation}
 
 \section{S-matrix}
 Describe here how to obtain the $S$--matrix to the required order.
