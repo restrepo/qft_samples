@@ -1,8 +1,12 @@
 \chapter{Calculation sample of the singlet scalar dark matter}
 
-Author: Isabel Andrade
+Author: Isabel Andrade\\
 
-Description of the processes to be calculated: we consider the lagrangian that describes the singlet scalar model of dark matter and we choose the direct annihilation of two scalar fields of two bosons Higgs.
+Description of the processes to be calculated: we consider the lagrangian that describes the singlet scalar model of dark matter and we choose the direct annihilation of two scalar fields of two bosons Higgs.\\
+
+\begin{align}
+SS \to HH
+\end{align}
 
 The Figures must be in PDF and included in the directory: \verb|figures|.
 
@@ -11,7 +15,7 @@ The Figures must be in PDF and included in the directory: \verb|figures|.
 Of the lagrangian that describes the singlet scalar model of dark matter:
 
 \begin{equation}
-\mathcal{L}=\mathcal{L}_s_m + \frac{1}{2} \partial_\mu S\partial^\mu S -\frac{m_0 ^2}{2} S^2 - \frac{\lambda_s}{4} S^4 - \lambda S^2H^\dagger H
+\mathcal{L}=\mathcal{L}_{sm} + \frac{1}{2} \partial_\mu S\partial^\mu S -\frac{m_0 ^2}{2} S^2 - \frac{\lambda_s}{4} S^4 - \lambda S^2H^\dagger H
 \end{equation}
 
 where H is the higgs doublet, and S is the singlet scalar field.
@@ -29,18 +33,226 @@ H=\begin{bmatrix}{0}\\{\frac{h+\mathfrak{v}}{\sqrt{2}}}\end{bmatrix}
 \end{equation}
 
 \begin{equation}
-\mathcal{L}^{int}= - \lambda S^2 \begin{bmatrix}{0}&{\frac{h+\mathfrak{v}}{\sqrt{2}}}\end{bmatrix} \begin{bmatrix}{0}\\{\frac{h+\mathfrak{v}}{\sqrt{2}}}\end{bmatrix}
+\begin{split}
+\mathcal{L}^{int} & ={ - \lambda S^2 \begin{bmatrix}{0}&{\frac{h+\mathfrak{v}}{\sqrt{2}}}\end{bmatrix} \begin{bmatrix}{0}\\{\frac{h+\mathfrak{v}}{\sqrt{2}}}\end{bmatrix}}\\  
+& =  {- \frac{\lambda}{2} S^2 (h+\mathfrak{v})(h+\mathfrak{v})}\\
+& = {-\frac{\lambda}{2} S^2 (hh+2 \mathfrak{v} h + \matfrak{v^2})}\\
+& = {-\frac{\lambda}{2} S^2hh - \lambda \mathfrak{v} S^2 h -\frac{\lambda}{2} \mathfrak{v^2} S^2}
+\end{split}
+\end{equation}
+
+we take the part of the direct interaction Lagrangian
+
+\begin{equation}
+\mathcal{L}=-\frac{\lambda}{2}S^2 hh
 \end{equation}
 
 \section{S-matrix}
-Describe here how to obtain the $S$--matrix to the required order.
 
-\section{Process calculation}
-Obtain the cross section or the decay width
+for direct interaction to first order we obtain $S$
+
+\begin{equation}
+\begin{split}
+S^{(1)} & {=- i \int {dx}^4 \mathcal{H}}\\
+& =  {- i \frac{\lambda}{2}\int {dx}^4 :hhS^2:}\\
+&  =  {- i \frac{\lambda}{2}\int {dx}^4 :{(h_++h_-)}^2{(S_++S_-)}^2 :}
+\end{split}
+\end{equation}
+
+where
+
+\begin{equation}
+\begin{split}
+{(h_++h_-)}^2{(S_++S_-)}^2 & = (h_+h_++h_-h_++h_+h_-+h_-h_-)(S_+S_++S_-S_++S_+S_-+S_-S_-)\\
+& = {h_+h_+S_+S_++h_-h_+S_+S_++h_+h_-S_+S_++h_-h_-S_+S_+}\\
+&  {h_+h_+S_-S_++h_-h_+S_-S_++h_+h_-S_-S_++h_-h_-S_-S_+}\\
+&  {h_+h_+S_+S_-+h_-h_+S_+S_-+h_+h_-S_+S_-+h_-h_-S_+S_-}\\
+&  {h_+h_+S_-S_-+h_-h_+S_-S_-+h_+h_-S_-S_-+h_-h_-S_-S_-}
+\end{split}
+\end{equation}
+
+To check that only the ordered terms are different from zero we can analyse the full terms for initial and final states defined as:\\
+ $\left| S(\vec{p_1})S(\vec{p_2}) \right\rangle $ initial\\
+ $\left\langle  h(\vec{p'_1}) h(\vec{p'_2})\right|$ final\\
+
+whit $s_+, h_+$ associated $ \hat {a}$, $S_+ \left |n\right \rangle$ and $h_+ \left|n\right\rangle$ annihilate
+
+$s_-, h_-$ associated $ \hat {a^{\dagger}}$, $S_+ \left |n\right \rangle$ and $h_+ \left|n\right\rangle$ creation\\
+
+matrix elements\\
+
+\begin{equation}
+\begin{split}
+&\left \langle 1_h 1_h 0_S 0_S | h_+ h_+ S_+ S_+|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 2_h 2_h 0_S 0_S|0_h 0_h 0_S 0_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_- h_+ S_+ S_+|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 0_h 2_h 0_S 0_S|0_h 0_h 0_S 0_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_+ h_- S_+ S_+|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 2_h 0_h 0_S 0_S|0_h 0_h 0_S 0_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_- h_- S_+ S_+|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 0_h 0_h 0_S 0_S|0_h 0_h 0_S 0_S\right \rangle\neq 0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_+ h_+ S_- S_+|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 2_h 2_h 0_S 0_S|0_h 0_h 1_S 0_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_- h_+ S_- S_+|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 0_h 2_h 0_S 0_S|0_h 0_h 1_S 0_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_+ h_- S_- S_+|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 2_h 0_h 0_S 0_S|0_h 0_h 1_S 0_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_- h_- S_- S_+|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 0_h 0_h 0_S 0_S|0_h 0_h 1_S 0_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_+ h_+ S_+ S_-|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 2_h 2_h 0_S 0_S|0_h 0_h 0_S 1_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_- h_+ S_+ S_-|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 0_h 2_h 0_S 0_S|0_h 0_h 0_S 1_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_+ h_- S_+ S_-|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 2_h 0_h 0_S 0_S|0_h 0_h 0_S 1_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_- h_- S_+ S_-|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 0_h 0_h 0_S 0_S|0_h 0_h 0_S 1_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_+ h_+ S_- S_-|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 2_h 2_h 0_S 0_S|0_h 0_h 2_S 2_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_- h_+ S_- S_-|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 0_h 2_h 0_S 0_S|0_h 0_h 2_S 2_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_+ h_- S_- S_-|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 2_h 0_h 0_S 0_S|0_h 0_h 2_S 2_S\right \rangle=0\\
+&\left \langle 1_h 1_h 0_S 0_S | h_- h_- S_- S_-|0_h 0_h 1_S 1_s\right\rangle \propto \left \langle 0_h 0_h 0_S 0_S|0_h 0_h 2_S 2_S\right \rangle=0
+\end{split}
+\end{equation}
+
+The only term that contributes to the matrix element of the process is
+
+\begin{equation}
+S^{(1)}=-i\frac{\lambda}{2} \int{{dx}^4 \left\langle 1_h 1_h 0_S 0_S|h_- h_- S_+ S_+|0_h 0_h 1_S 1_S \right \rangle}
+\end{equation}
+ 
+Let us define the one–particle states
+
+\begin{equation}
+\begin{split}
+&\left| h(p'_1)\right \rangle \equiv \frac{1}{\sqrt{V}} \hat{a}_{p'_1}^{\dagger} \left| 0 \right \rangle\\ 
+&\left| h(p'_2)\right \rangle \equiv \frac{1}{\sqrt{V}} \hat{a}_{p'_2}^{\dagger} \left | 0 \right \rangle
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+&\left| S(p_1)\right \rangle \equiv \frac{1}{\sqrt{V}} \hat{a}_{p_1}^{\dagger} \left| 0 \right \rangle\\ 
+&\left| S(p_2)\right \rangle \equiv \frac{1}{\sqrt{V}} \hat{a}_{p_2}^{\dagger} \left | 0 \right \rangle
+\end{split}
+\end{equation}
+
+our states are then normalizad as
+
+\begin{equation}
+\begin{split}
+&\left\langle| h(p_1) | h(p'_1)\right \rangle = \frac{2\pi^3}{V} \delta (p_1-p'_1)\\
+&\left\langle | h(p_2) | h(p'_2)\right \rangle = \frac{2\pi^3}{V} \delta(p_2-p'_2)
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+&\left\langle| S(p_1) | S(p'_1)\right \rangle = \frac{2\pi^3}{V} \delta (p_1-p'_1)\\
+&\left\langle | S(p_2) | S(p'_2)\right \rangle = \frac{2\pi^3}{V} \delta(p_2-p'_2)
+\end{split}
+\end{equation}
+
+Now we can write down the action of various field operators on different one particles states
+
+\begin{equation}
+\begin{split}
+S_+ \left| S(p_1) \right \rangle & = \int{ {dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p_1}}} \hat{a}_p^\dagger e^{-ip.x} \frac{1}{\sqrt{V}} \hat{a}_{p_1}^\dagger \left | 0 \right \rangle}\\
+&=\int {{dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p_1}}} e^{-ip.x} (\hat{a}_p \hat{a}_{p_1}^\dagger - \hat{a}_{p_1}^\dagger \hat{a}_p)\left | 0 \right \rangle }\\
+&=\int {{dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p_1}V}} e^{-ip.x} 2\pi^3 \delta(p-p_1) \left | 0 \right \rangle }\\
+&= \frac{1}{\sqrt{2E_{p_1}V}} e^{-ip_1.x} \left | 0 \right \rangle
+\end{split}
+\end{equation}
+
+where $\hat{a}_p \left | 0 \right \rangle$ is zero
+
+\begin{equation}
+\begin{split}
+S_+ \left| S(p_2) \right \rangle & = \int{ {dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p_2}}} \hat{a}_p^\dagger e^{-ip.x} \frac{1}{\sqrt{V}} \hat{a}_{p_2}^\dagger \left | 0 \right \rangle}\\
+&=\int {{dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p_2}}} e^{-ip.x} (\hat{a}_p \hat{a}_{p_2}^\dagger - \hat{a}_{p_2}^\dagger \hat{a}_p)\left | 0 \right \rangle }\\
+&=\int {{dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p_2}V}} e^{-ip.x} 2\pi^3 \delta(p-p_2) \left | 0 \right \rangle }\\
+&= \frac{1}{\sqrt{2E_{p_2}V}} e^{-ip_2.x} \left | 0 \right \rangle
+\end{split}
+\end{equation}
+
+\begin{equation}
+\begin{split}
+h_+ \left| h(p'_1) \right \rangle & = \int{ {dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p'_1}}} \hat{a}_p^\dagger e^{-ip.x} \frac{1}{\sqrt{V}} \hat{a}_{p'_1}^\dagger \left | 0 \right \rangle}\\
+&=\int {{dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p'_1}}} e^{-ip.x} (\hat{a}_p \hat{a}_{p'_1}^\dagger - \hat{a}_{p'_1}^\dagger \hat{a}_p)\left | 0 \right \rangle }\\
+&=\int {{dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p'_1}V}} e^{-ip.x} 2\pi^3 \delta(p-p'_1) \left | 0 \right \rangle }\\
+&= \frac{1}{\sqrt{2E_{p'_1}V}} e^{-ip'_1.x} \left | 0 \right \rangle
+\end{split}
+\end{equation}
+
+his adjoint operator
+
+\begin{equation}
+\left \langle h(p'_1) \right | h_- = \frac{1}{\sqrt{2E_{p'_1}V}} e^{ip'_1.x} \left \langle 0 \right |
+\end{equation}
+
+\begin{equation}
+\begin{split}
+h_+ \left| h(p'_2) \right \rangle & = \int{ {dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p'_2}}} \hat{a}_p^\dagger e^{-ip.x} \frac{1}{\sqrt{V}} \hat{a}_{p'_2}^\dagger \left | 0 \right \rangle}\\
+&=\int {{dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p'_2}}} e^{-ip.x} (\hat{a}_p \hat{a}_{p'_2}^\dagger - \hat{a}_{p'_2}^\dagger \hat{a}_p)\left | 0 \right \rangle }\\
+&=\int {{dp}^3 \frac{1}{2\pi^3} \frac{1}{\sqrt{2E_{p'_2}V}} e^{-ip.x} 2\pi^3 \delta(p-p'_2) \left | 0 \right \rangle }\\
+&= \frac{1}{\sqrt{2E_{p'_2}V}} e^{-ip'_2.x} \left | 0 \right \rangle
+\end{split}
+\end{equation}
+
+his adjoint operator
+
+\begin{equation}
+\left \langle h(p'_2) \right | h_- = \frac{1}{\sqrt{2E_{p'_2}V}} e^{ip'_2.x} \left \langle 0 \right |
+\end{equation}
+
+the matrix element at first order between the initial and final stetes is 
+
+\begin{equation}
+\begin{split}
+S_{fi}^{(1)} &= -i \frac{\lambda}{2} \int{ d^4x \left \langle h(p'_1) h(p'_2)| h_- h_- S_+ S_+ | S(p_1) S(p_2) \right \rangle }\\
+&=-i \frac{\lambda}{2} \int{ d^4x e^{i(p'_1+p'_2-p_1-p_2)} \frac{1}{\sqrt{2E_{p'_1}V}} \frac{1}{\sqrt{2E_{p'_2}V}} \frac{1}{\sqrt{2E_{p_1}V}} \frac{1}{\sqrt{2E_{p_2}V}} } \end{split}
+\end{equation}
+
+since
+
+\begin{equation}
+\int{ d^4 x e^{i(p'_1+p'_2-p_1-p_2)} \equiv {(2 \pi)}^4 \delta (p'_1 + p'_2 - p_1 - p_2)
+\end{equation}
+
+\begin{equation}
+S_{fi}^{(1)} = \begin{bmatrix}\frac{1}{\sqrt{2E_{p'_1}V}} & \frac{1}{\sqrt{2E_{p_2}V}} & \frac{1}{\sqrt{2E_{p_1}v}} & \frac{1}{\sqrt{2E_{p_2}V}} \end{bmatrix} (2\pi)^4 \delta^4 (p'_1 + p'_2 - p_1 - p_2) \left( \dispalystyle\frac{-i\lambda}{2} \right)
+\end{equation}
+
+where the amplitude is
+
+\begin{equation}
+\mathcal{M} = -i \frac{\lambda}{2}
+\end{equation}
+
+\section{Process calculation cross section}
+
+using equation
+
+\begin{equation}
+\frac{d\sigma}{d\Omega} = \frac{1}{64 \pi^2 s} \left\{ \frac{ [s-(m'_1 +m'_2)^2]}{[s-(m_1 + m_2)^2]} \frac{[s-(m'_1 - m'_2)^2 ]}{[s-(m_1 -m_2)^2]} \right\}^{\frac{1}{2}} | \bar{\mathcal{M}} |^2  
+\end{equation}
+
+with
+
+\begin{equation}
+\sqrt{s} = E_1 + E_2
+\end{equation}
+
+\begin{equation}
+|\bar{ \mathcal{M} } |^2 = \frac{\lambda^2}{4}
+\end{equation}
+
+$m'_1 =m'_2 $ and $m_1 =m_2$  
+
+\begin{equation}
+\frac{d\sigma}{d\Omega} = \frac{1}{64 \pi^2 s} \left\{ \frac{ [s-(m'_1 +m'_2)^2]}{[s-(m_1 + m_2)^2]} \right\}^{\frac{1}{2}}  \frac{\lambda^2}{4}  
+\end{equation}
+
+the cross section
+
+\begin{equation}
+\begin{split}
+\sigma &= \frac{1}{64 \pi^2 s} \left\{ \frac{ [s-(m'_1 +m'_2)^2]}{[s-(m_1 + m_2)^2]} \right\}^{\frac{1}{2}}  \frac{\lambda^2}{4} \int{ d\Omega}\\
+&= \frac{1}{64 \pi^2 s} \left\{ \frac{ [s-(m'_1 +m'_2)^2]}{[s-(m_1 + m_2)^2]} \right\}^{\frac{1}{2}}  \frac{\lambda^2}{4} \int{ d\theta d\varphi \sin{\theta}}\\
+&= \frac{1}{64 \pi s} \left\{ \frac{ [s-(m'_1 +m'_2)^2]}{[s-(m_1 + m_2)^2]} \right\}^{\frac{1}{2}}  \lambda^2
+\end{split}
+\end{equation}
+
 
 \section{CalcHEP comparison}
 Check the result with CalcHEP. Please give the LanHEP code if necessary.
-
 
 \section{Copyright}
 \includegraphics[scale=0.5]{cc} Creative Commons Attribution-Share Alike 3.0 United States License.
