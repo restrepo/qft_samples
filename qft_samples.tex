@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+\usepackage[utf8]{inputenc}
 \usepackage[colorlinks=true]{hyperref}
 \usepackage{graphicx}
 \usepackage{cancel}
@@ -18,6 +19,15 @@
 \specialcomment{inprogress}
 {\begingroup\itshape \textbf{Begin Draft:}}{\textbf{End Draft.} \medskip \endgroup}
 \excludecomment{inprogress}
+
+%MY COMMANDS
+\newcommand{\pr}[1]{ \left( #1 \right) }
+\newcommand{\cor}[1]{ \left[ #1 \right] }
+\newcommand{\lla}[1]{ \left\{ #1 \right\} }
+\newcommand{\ket}{\rangle}
+\newcommand{\bra}{\langle}
+\newcommand{\eq}[2]{\begin{equation} \label{eq#1} #2 \end{equation}}
+
 
 
 
@@ -60,32 +70,35 @@
 % $e^+ e^- \to e^- e^-$: Diego
 %\include{e-e-to_e-e-} 
 % $e^- e^+ \to \mu^+ \mu^-$: David Noreña
-\include{eemumu}
+%\include{e-e+to_mu+mu-}
 % $\mu^- \to e^- \bar{\nu}_e \nu_\mu$: Cristian
-\include{mudecay}
+% \include{mudecay}
 % Singlet dark matter: Isabel 0909.2799
 \include{sdm1}
-% Sebastian SS \to Z Z
+% Singlet dark matter: Isabel 0909.2799
 \include{sdm2}
 % Inert Dark matter I: Juan David 1011.1411
 %\include{idm1}
 % Inert Dark matter II: Jehison 1011.1411
-<<<<<<< HEAD
 %\include{idm2}
 % Radiative see saw I: Alvaro 0808.3340
-=======
-\include{idm2}
-% Radiative see saw I: Alvaro hep-ph/0601225
->>>>>>> d03b1fb878295a99c7961d12a568db1ba7920de4
 \include{rss1}
 % Radiative see saw II: Wady 0808.3340
 %\include{rss2}
-% zee model I: Andrés Estrada hep-ph/0604012
-\include{zee}
-% THDM II:  Yubian hep-ph/0504050
-\include{thdmii}
+% Radiative see saw III: 
+%\include{rss2}
+% zee model I: Andrés hep-ph/0604012
+%\include{rss2}
+% zee model II:
+%\include{rss2}
+% THDM I:  Yubian hep-ph/0504050
+%\include{rss2}
 % THDM II: Oscar Andrés hep-ph/0504050
 %\include{rss2}
+
+
+%\include{sdm}
+
 
 
 \end{document}
