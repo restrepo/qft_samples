@@ -1,0 +1,391 @@
+
+\chapter{$H_{0}H_{0}\rightarrow b\bar{b}$}
+
+Author: Jehison Alexander Monsalve Zapata
+
+\section*{Descripcion}
+
+El modelo donde se agrega un higgs mas al modelo estandar con unas
+simetrias particulares tal que $H_{0}$sea estable, el proceso que
+voy a calcular es $H_{0}H_{0}\rightarrow b\bar{b}$
+
+
+\section*{Langragiano}
+
+$\mathcal{L}_{int}=\mathcal{L}_{sm}+\lambda_{3}H_{1}^{\dagger}H_{1}H_{2}^{\text{\ensuremath{\dagger}}}H_{2}+\lambda_{4}H_{1}^{\dagger}H_{2}H_{2}^{\dagger}H_{1}+\dfrac{\lambda_{5}}{2}\left[\left(H_{1}^{\dagger}H_{2}\right)^{2}+\left(H_{2}^{\dagger}H_{1}\right)^{2}\right]$
+
+donde $H_{1}=\left[\begin{array}{c}
+0\\
+\dfrac{h+v}{\sqrt{2}}\end{array}\right]$ en el gauge unitario
+
+y $H_{2}=\left[\begin{array}{c}
+H^{+}\\
+\dfrac{H^{0}+\imath A^{0}}{\sqrt{2}}\end{array}\right]$
+
+ahora miremos el primer termino
+
+\[
+\lambda_{3}H_{1}^{\dagger}H_{1}H_{2}^{\text{\ensuremath{\dagger}}}H_{2}=\lambda_{3}\left[\begin{array}{cc}
+0 & \dfrac{h+v}{\sqrt{2}}\end{array}\right]\left[\begin{array}{c}
+0\\
+\dfrac{h+v}{\sqrt{2}}\end{array}\right]\left[\begin{array}{cc}
+H^{-} & \dfrac{H^{0}-\imath A^{0}}{\sqrt{2}}\end{array}\right]\left[\begin{array}{c}
+H^{+}\\
+\dfrac{H^{0}+\imath A^{0}}{\sqrt{2}}\end{array}\right]\]
+
+
+						$=\dfrac{\lambda_{3}}{4}(h+v)^{2}(H^{-}H^{+}+(H^{0})^{2}+(A^{0})^{2})=\dfrac{\lambda_{3}}{4}(h^{2}+2vh+v^{2})(H^{-}H^{+}+H^{0}H^{0}+A^{0}A^{0})$
+
+del cual solo nos interesa $\dfrac{\lambda_{3}}{4}2vhH^{0}H^{0}=\dfrac{\lambda_{3}}{2}vhH^{0}H^{0}$
+
+miremos los terminos con $\lambda_{4}$
+
+\[
+\lambda_{4}H_{1}^{\dagger}H_{2}H_{2}^{\dagger}H_{1}=\lambda_{4}\left[\begin{array}{cc}
+0 & \dfrac{h+v}{\sqrt{2}}\end{array}\right]\left[\begin{array}{c}
+H^{+}\\
+\dfrac{H^{0}+\imath A^{0}}{\sqrt{2}}\end{array}\right]\left[\begin{array}{cc}
+H^{-} & \dfrac{H^{0}-\imath A^{0}}{\sqrt{2}}\end{array}\right]\left[\begin{array}{c}
+0\\
+\dfrac{h+v}{\sqrt{2}}\end{array}\right]\]
+
+
+\[
+=\dfrac{\lambda_{4}}{4}(h+v)(H^{0}+\imath A^{0})(H^{0}-\imath A^{0})(h+v)\]
+
+
+ya que son bosones y cumple reglas de conmutacion
+
+\[
+=\dfrac{\lambda_{4}}{4}(h+v)^{2}\left[(H^{0})^{2}+(A^{0})^{2}\right]\]
+
+
+de aqui sacamos el termico $\dfrac{\lambda_{4}}{4}2vhH^{0}H^{0}$
+
+desarrollemos los terminos que acompañan a $\lambda_{5}$
+
+\[
+\left(H_{1}^{\dagger}H_{2}\right)^{2}+\left(H_{2}^{\dagger}H_{\text{1}}\right)^{2}=\left(\left[\begin{array}{cc}
+0 & \dfrac{h+v}{\sqrt{2}}\end{array}\right]\left[\begin{array}{c}
+H^{+}\\
+\dfrac{H^{0}+\imath A^{0}}{\sqrt{2}}\end{array}\right]\right)^{2}+\left(\left[\begin{array}{cc}
+H^{-} & \dfrac{H^{0}-\imath A^{0}}{\sqrt{2}}\end{array}\right]\left[\begin{array}{c}
+0\\
+\dfrac{h+v}{\sqrt{2}}\end{array}\right]\right)^{2}\]
+
+
+\[
+\propto\left(h(H^{0}+\imath A^{0})+v(H^{0}+iA^{0})\right)^{2}+\left((H^{0}-\imath A^{0})h+v(H^{0}-\imath A^{0})\right)^{2}\]
+
+
+el factor de proporcionalidad es $\dfrac{1}{4}$
+
+\[
+=h^{2}(H^{0}+\imath A^{0})^{2}+2vh(H^{0}+\imath A^{0})^{2}+h^{2}(H^{0}-\imath A^{0})^{2}+2hv(H^{0}-\imath A^{0})^{2}+v^{2}(\ldots)\]
+
+
+de los cuales solos nos interesas los terminos con $hH^{0}H^{0}$
+
+es decir $2vhH^{0}H^{0}+2vhH^{0}H^{0}=4vhH^{0}H^{0}$
+
+ahora retomando las constantes tenemos que el termino del lagragiano
+que nos intereas es $\dfrac{\lambda_{5}}{2}vhH^{0}H^{0}$
+
+ahora ponemos todo junto y el lagrangiano de interacion es 
+
+\[
+\mathcal{L_{\textrm{int}}}=v\dfrac{\lambda_{3}+\lambda_{4}+\lambda_{5}}{2}hH^{0}H^{0}=v\dfrac{\lambda_{L}}{2}hH^{0}H^{0}\]
+
+
+junto con la interacion del higgs con los fermiones tenemos 
+
+\[
+\mathcal{L_{\textrm{int}\textrm{Total}}}=v\dfrac{\lambda_{L}}{2}hH^{0}H^{0}-k\overline{\psi}\psi h\]
+
+
+
+\section*{Matriz S}
+
+Solo nos interesa orden 2 en la matriz s ya que el proceso que calcularemos
+lo requiere de ese modo entonces 
+
+aplicanado la definicicon\[
+S^{(2)}=\dfrac{(-\imath)^{2}}{2!}\int d^{4}x_{1}\int d^{4}x_{2}\mathcal{J}\left[\mathcal{H}(x_{1})\mathcal{H}(x_{2})\right]\]
+
+
+de donde $\mathcal{H}(x)=\mathcal{H}_{1}(x)+\mathcal{H}_{2}(x)$ y
+$\mathcal{H}_{1}(x)=-v\dfrac{\lambda_{L}}{2}hH^{0}H^{0}$, $\mathcal{H}_{2}(x)=k\overline{\psi}\psi h$
+
+haciendo el producto 
+
+$\mathcal{H}(x_{1})\mathcal{H}(x_{2})=\mathcal{H}_{1}(x_{1})\mathcal{H}_{1}(x_{2})+\mathcal{H}_{1}(x_{1})\mathcal{H}_{2}(x_{2})+\mathcal{H}_{2}(x_{1})\mathcal{H}_{1}(x_{2})+\mathcal{H}_{2}(x_{1})\mathcal{H}_{2}(x_{2})$
+
+y para el proceso de que estamos calculando el unico termino distinto
+de cero es $\mathcal{H}_{2}(x_{1})\mathcal{H}_{1}(x_{2})$
+
+sustituyendo en la matriz s 
+
+\[
+S^{(2)}=\dfrac{(-\imath)^{2}}{2!}\int d^{4}x_{1}\int d^{4}x_{2}\mathcal{J}\left[\mathcal{H}_{2}(x_{1})\mathcal{H}_{1}(x_{2})\right]\]
+
+
+\[
+S^{(2)}=\dfrac{-kv\lambda_{L}}{4}\int d^{4}x_{1}\int d^{4}x_{2}\mathcal{J}\left[(:\overline{\psi}\psi h:)_{x_{1}}(:hH^{0}H^{0}:)_{x_{2}}\right]\]
+
+
+ya que la unica contracion es entre el $h(x_{1})$ con el $h(x_{2})$ 
+
+\[
+S^{(2)}=\dfrac{-kv\lambda_{L}}{4}\int d^{4}x_{1}\int d^{4}x_{2}(:\bar{\psi}\psi H^{0}H^{0}:)\imath\Delta_{F}(x_{1}-x_{2})\]
+
+
+descomponiendo los campo en operdores de creacion y destruccion tenemos
+
+\[
+S^{(2)}=\dfrac{-kv\lambda_{L}}{4}\int d^{4}x_{1}\int d^{4}x_{2}\imath\Delta_{F}(x_{1}-x_{2}):\bar{(\psi}_{+}+\bar{\psi}_{-})(\psi_{+}+\psi_{-})(H_{+}^{0}+H_{-}^{0})(H_{+}^{0}+H_{-}^{0}):\]
+
+
+los unicos terminos que nos son cero son aquellos tales que $\langle b^{-}(p,s)b^{+}(p',s')\vert ABCD\vert H^{0}(k)H^{0}(k')\rangle=\langle0\vert0\rangle$
+
+entonces los unicos que cumplen esto son $\bar{\psi}_{-},\psi_{-},H_{+}^{0},H_{+}^{0}$y
+asi nos queda
+
+\[
+S^{(2)}=\dfrac{-kv\lambda_{L}}{4}\int d^{4}x_{1}\int d^{4}x_{2}\imath\Delta_{F}(x_{1}-x_{2}):\bar{\psi}_{-}\psi_{-}H_{+}^{0}H_{+}^{0}:\]
+
+
+ahora vamos a tratar esto separadamente para hacer mas comoda la deduccion 
+
+el estado inicial son dos higgs cero $\vert H^{0}(k)H^{0}(k')\rangle=\dfrac{1}{V}a^{\dagger}(k)a^{\dagger}(k')\vert0\rangle$
+
+el estod final es un boton y un antiboton $\vert b^{-}(p,s)b^{+}(p',s')\rangle=\dfrac{1}{V}f^{\dagger}(p,s)g^{\dagger}(p',s')\vert0\rangle$
+
+\begin{eqnarray*}
+\bar{\psi}_{+}\psi_{+}\vert b^{-}(p,s)b^{+}(p',s')\rangle & = & \int d^{3}q_{1}\int d^{3}q_{2}\dfrac{1}{(2\pi)^{6}\sqrt{4E(q_{1})E(q_{2})}}u^{\alpha}(q_{1})\bar{v}^{\beta}(q_{2})f(q_{1})e^{-\imath q_{1}\cdot x_{2}}g(q_{2})e^{-\imath q_{2}\cdot x_{2}}\\
+ &  & \dfrac{1}{V}f^{\dagger}(p,s)g^{\dagger}(p',s')\vert0\rangle\end{eqnarray*}
+
+
+podemos sumar $f^{\dagger}(p,s)g^{\dagger}(p',s')f(q_{1})g(q_{2})\vert0\rangle=0$
+
+con lo cual nos queda el termino
+
+$f(q_{1})g(q_{2})f^{\dagger}(p,s)g^{\dagger}(p',s')+f^{\dagger}(p,s)g^{\dagger}(p',s')f(q_{1})g(q_{2})=\left\{ f(q_{1})g(q_{2}),f^{\dagger}(p,s)g^{\dagger}(p',s')\right\} $
+
+y tenemos una propiedad de los anticomutadores 
+
+$\left\{ AB,CD\right\} =A\left\{ B,C\right\} D-\left\{ A,C\right\} BD+CA\left\{ B,D\right\} -C\left\{ A,D\right\} B$
+
+utilizandola
+
+\begin{eqnarray*}
+\left\{ fg,f^{\dagger}g^{\dagger}\right\}  & = & f\left\{ g,f^{\dagger}\right\} g^{\dagger}-\left\{ f,f^{\dagger}\right\} gg^{\dagger}+f^{\dagger}f\left\{ g,g^{\dagger}\right\} -f^{\dagger}\left\{ f,g^{\dagger}\right\} g\\
+ &  & =-\left\{ f,f^{\dagger}\right\} gg^{\dagger}+f^{\dagger}f\left\{ g,g^{\dagger}\right\} \end{eqnarray*}
+
+
+ya que los otros anticonmutadores son nulos 
+
+\begin{multline*}
+\left\{ f(q_{1})g(q_{2}),f^{\dagger}(p)g^{\dagger}(p')\right\} =-\delta^{3}(q_{1}-p)g(q_{1})g^{\dagger}(p')+f^{\dagger}(p)f(p)\delta^{3}(q_{2}-p')\end{multline*}
+
+
+\begin{multline*}
+f^{\dagger}f\left\{ g,g^{\dagger}\right\} \vert0\rangle=0\end{multline*}
+
+
+luego aplicando las reglas de anticomutacion entonces tenemos que 
+
+\begin{multline*}
+\left\{ f(q_{1})g(q_{2}),f^{\dagger}(p)g^{\dagger}(p')\right\} =-\delta^{3}(q_{1}-p)\delta^{3}(q_{2}-p')\end{multline*}
+
+
+luego 
+
+$\bar{\psi}_{+}\psi_{+}\vert b^{-}(p,s)b^{+}(p',s')\rangle=-\int d^{3}q_{1}\int d^{3}q_{2}\dfrac{1}{(2\pi)^{6}V\sqrt{4E(q_{1})E(q_{2})}}u^{\alpha}(q_{1})\bar{v}^{\beta}(q_{2})e^{-\imath q_{1}\cdot x_{2}}e^{-\imath q_{2}\cdot x_{2}}\delta^{3}(q_{1}-p)\delta^{3}(q_{2}-p')\vert0\rangle$
+
+$\bar{\psi}_{+}\psi_{+}\vert b^{-}(p,s)b^{+}(p',s')\rangle=-\dfrac{1}{(2\pi)^{6}V\sqrt{4E(q_{1})E(q_{2})}}u^{\alpha}(p)\bar{v}^{\beta}(p')e^{-\imath p\cdot x_{2}}e^{-\imath p'\cdot x_{2}}\vert0\rangle$
+
+\begin{eqnarray*}
+H_{+}^{0}(x_{1})H_{+}^{0}(x_{1})\vert H^{0}(k)H^{0}(k')\rangle & = & \int d^{3}q_{1}\int d^{3}q_{2}\dfrac{1}{(2\pi)^{6}\sqrt{4E(q_{1})E(q_{2})}}a(q_{1})e^{-\imath q_{1}\cdot x_{1}}a(q_{2})e^{-\imath q_{2}\cdot x_{2}}\\
+ &  & \dfrac{1}{V}a^{\dagger}(k)a^{\dagger}(k')\vert0\rangle\end{eqnarray*}
+
+
+desarrollemos $a(q_{1})a(q_{2})a^{\dagger}(k)a^{\dagger}(k')\vert0\rangle=a(q_{1})a(q_{2})a^{\dagger}(k)a^{\dagger}(k')\vert0\rangle-a^{\dagger}(k)a^{\dagger}(k')a(q_{1})a(q_{2})\vert0\rangle$
+
+y nos queda $a(q_{1})a(q_{2})a^{\dagger}(k)a^{\dagger}(k')\vert0\rangle=\left[a(q_{1})a(q_{2}),a^{\dagger}(k)a^{\dagger}(k')\right]\vert0\rangle$
+
+por identidad de conmutadores $\left[AB,CD\right]=\left[A,C\right]BD+C\left[A,D\right]B+A\left[B,C\right]D+CA\left[B,D\right]$
+
+\[
+\left[a_{q_{1}}a_{q_{2}},a_{k}^{\dagger}a_{k'}^{\dagger}\right]=\left[a_{q_{1}},a_{k}^{\dagger}\right]a_{q_{2}}a_{k'}^{\dagger}+a_{k}^{\dagger}\left[a_{q_{1}},a_{k'}^{\dagger}\right]a_{q_{2}}+a_{q_{1}}\left[a_{q_{2}},a_{k}^{\dagger}\right]a_{k'}^{\dagger}+a_{k}^{\dagger}a_{q_{1}}\left[a_{q_{2}},a_{k'}^{\dagger}\right]\]
+
+
+\[
+\left[a_{q_{1}}a_{q_{2}},a_{k}^{\dagger}a_{k'}^{\dagger}\right]=\delta^{3}(q_{1}-k)a_{q_{2}}a_{k'}^{\dagger}+a_{k}^{\dagger}\delta^{3}(q_{1}-k')a_{q_{2}}+a_{q_{1}}\delta^{3}(q_{2}-k)a_{k'}^{\dagger}+a_{k}^{\dagger}a_{q_{1}}\delta^{3}(q_{2}-k')\]
+
+
+y como dos son cero aplicandolos al vacio
+
+\[
+\left[a_{q_{1}}a_{q_{2}},a_{k}^{\dagger}a_{k'}^{\dagger}\right]=\delta^{3}(q_{1}-k)a_{q_{2}}a_{k'}^{\dagger}+\delta^{3}(q_{2}-k)a_{q_{1}}a_{k'}^{\dagger}\]
+
+
+aplicando el mismo metodo tenemos 
+
+\[
+\left[a_{q_{1}}a_{q_{2}},a_{k}^{\dagger}a_{k'}^{\dagger}\right]=\delta^{3}(q_{1}-k)\delta^{3}(q_{2}-k')+\delta^{3}(q_{2}-k)\delta^{3}(q_{1}-k')\]
+
+
+lugo 
+
+\[
+H_{+}^{0}(x_{1})H_{+}^{0}(x_{1})\vert H^{0}(k)H^{0}(k')\rangle=\dfrac{2}{(2\pi)^{6}V\sqrt{4E(k)E(k')}}e^{-\imath k\cdot x_{1}}e^{-\imath k'\cdot x_{1}}\vert0\rangle\]
+
+
+\[
+S_{fi}^{(2)}=\dfrac{-kv\lambda_{L}}{4}\int d^{4}x_{1}\int d^{4}x_{2}\imath\Delta_{F}(x_{1}-x_{2})\langle\bar{b^{-}(p,s)b^{+}(p',s')\vert\psi}_{-}\psi_{-}H_{+}^{0}H_{+}^{0}\vert H^{0}(k)H^{0}(k')\rangle\]
+
+
+reemplazando lo anterior en esta ecuancion nos queda
+
+\[
+S_{fi}^{(2)}=\dfrac{-kv\lambda_{L}}{4}\int d^{4}x_{1}\int d^{4}x_{2}\imath\Delta_{F}(x_{1}-x_{2})\langle0\vert\dfrac{\delta_{ss'}}{V\sqrt{4E(p)E(p')}}\bar{u}_{s}(p)e^{\imath p\cdot x_{2}}v_{s'}(p')e^{\imath p'\cdot x_{2}}\dfrac{2}{V\sqrt{4E(k)E(k')}}e^{-\imath k\cdot x_{1}}e^{-\imath k'\cdot x_{1}}\vert0\rangle\]
+
+
+ya que $\langle0\vert0\rangle=\text{1}$ nos queda 
+
+\[
+S_{fi}^{(2)}=\dfrac{-kv\lambda_{L}}{4}\int d^{4}x_{1}\int d^{4}x_{2}\imath\Delta_{F}(x_{1}-x_{2})\dfrac{\delta_{ss'}}{V\sqrt{4E(p)E(p')}}\bar{u}_{s}(p)e^{\imath p\cdot x_{2}}v_{s'}(p')e^{\imath p'\cdot x_{2}}\dfrac{1}{V\sqrt{4E(k)E(k')}}e^{-\imath k\cdot x_{1}}e^{-\imath k'\cdot x_{1}}\]
+
+
+reagrupando ternimos
+
+\[
+S_{fi}^{(2)}=\dfrac{-kv\lambda_{L}}{2}\int d^{4}x_{1}\int d^{4}x_{2}\dfrac{\delta_{ss'}}{V^{2}\sqrt{16E(p)E(p')E(k)E(k')}}\bar{u}_{s}(p)v_{s'}(p')\imath\Delta_{F}(x_{1}-x_{2})e^{\imath(p+p')\cdot x_{2}}e^{-\imath(k+k')\cdot x_{1}}\]
+
+
+tenemos que el propagador es $\imath\Delta_{F}(x_{1}-x_{2})=\int\dfrac{d^{4}p}{(2\pi)^{4}}\imath\Delta_{F}(q)e^{\imath q\cdot(x_{1}-x_{2})}$
+
+\[
+S_{fi}^{(2)}=\dfrac{-kv\lambda_{L}}{2}\int d^{4}x_{1}\int d^{4}x_{2}\dfrac{\delta_{ss'}}{4V^{2}\sqrt{E(p)E(p')E(k)E(k')}}\bar{u}_{s}(p)v_{s'}(p')\int\dfrac{d^{4}q}{(2\pi)^{4}}\imath\Delta_{F}(q)e^{\imath q\cdot(x_{1}-x_{2})}e^{\imath(p+p')\cdot x_{2}}e^{-\imath(k+k')\cdot x_{1}}\]
+
+
+\[
+S_{fi}^{(2)}=\dfrac{-kv\lambda_{L}}{2}\int\dfrac{d^{4}q}{(2\pi)^{4}}\int d^{4}x_{1}\int d^{4}x_{2}\dfrac{\delta_{ss'}}{4V^{2}\sqrt{E(p)E(p')E(k)E(k')}}\bar{u}_{s}(p)v_{s'}(p')\imath\Delta_{F}(q)e^{\imath(p+p'-q)\cdot x_{2}}e^{-\imath(k+k'-q)\cdot x_{1}}\]
+
+
+integrando en $x_{2}$nos queda
+
+\[
+S_{fi}^{(2)}=\dfrac{-kv\lambda_{L}}{2}\int d^{4}q\int d^{4}x_{2}\dfrac{\delta_{ss'}}{4V^{2}\sqrt{E(p)E(p')E(k)E(k')}}\bar{u}_{s}(p)v_{s'}(p')\imath\Delta_{F}(q)\delta^{4}(p+p'-q)e^{\imath(q-k-k')\cdot x_{1}}\]
+
+
+integrando en $x_{1}$
+
+\[
+S_{fi}^{(2)}=\dfrac{-kv\lambda_{L}}{2}\int d^{4}q\dfrac{\delta_{ss'}}{4V^{2}\sqrt{E(p)E(p')E(k)E(k')}}\bar{u}_{s}(p)v_{s'}(p')\imath\Delta_{F}(q)\delta^{4}(p+p'-q)(2\pi)^{4}\delta^{4}(q-k-k')\]
+
+
+integrando en $q$
+
+\[
+S_{fi}^{(2)}=(2\pi)^{4}\dfrac{\delta_{ss'}\delta^{4}(p+p'-k-k')}{4V^{2}\sqrt{E(p)E(p')E(k)E(k')}}\bar{u}_{s}(p)v_{s'}(p')\imath\Delta_{F}(k+k')\]
+
+
+donde la amplitud
+
+\[
+\mathcal{M}_{fi}=\dfrac{-\imath kv\lambda_{L}}{2}\bar{u}_{s}(p)v_{s'}(p')\Delta_{F}(k+k')\]
+
+
+pero lo que nesecitamos es la norma de la amplitud, y sumemos sobre
+todo s, y s'
+
+\[
+\vert\mathcal{M}_{fi}\vert^{2}=\mathcal{M}_{fi}^{\dagger}\mathcal{M}_{fi}=\left(\dfrac{kv\lambda_{L}}{2}\right)^{2}\sum_{s,s'}\bar{u}_{s}(p)v_{s'}(p')\bar{v}_{s'}(p')u_{s}(p)\Delta_{F}^{2}(k+k')\]
+
+
+miremos que es 
+
+\[
+\sum_{s,s'}\bar{u}_{s}(p)v_{s'}(p')\bar{v}_{s'}(p')u_{s}(p)=\sum_{s}\bar{u}_{s}(p)u_{s}(p)\sum_{s'}v_{s'}(p')\bar{v}_{s'}(p')_{s'}\]
+
+
+\[
+\sum_{s}\bar{u}_{\beta}(p,s)u_{\alpha}(p,s)\sum_{s'}v_{\alpha}(p',s')\bar{v}_{\beta}(p',s')_{s'}=(\gamma_{\mu}p^{\mu}+m)_{\beta\alpha}(\gamma_{\nu}p'^{\nu}-m)_{\text{\ensuremath{\alpha\beta}\ }}\]
+\[
+Tr\left((\gamma_{\mu}p^{\mu}+m)(\gamma_{\nu}p'^{\nu}-m)\right)=Tr(\gamma_{\mu}\gamma_{\nu}p^{\mu}p'^{\nu}+\gamma_{\nu}mp'^{\nu}-\gamma_{\mu}mp^{\text{\ensuremath{\mu}}}-m^{2})\]
+
+
+por propiedades del traza y teniendo en cuenta $Tr(\gamma_{\nu})=0$
+; $Tr(\gamma_{\mu}\gamma_{\nu})=4g_{\mu\nu}$
+
+\[
+Tr(\gamma_{\mu}\gamma_{\nu}p^{\mu}p'^{\nu})+Tr(\gamma_{\nu}mp'^{\nu})-Tr(\gamma_{\mu}mp^{\text{\ensuremath{\mu}}})-Tr(m^{2})=4(p^{\mu}p'_{\nu}-m^{2})\]
+
+
+entoces
+
+\[
+\vert\mathcal{M}_{fi}\vert^{2}=\left(kv\lambda_{L}\right)^{2}(p^{\mu}p'_{\nu}-m^{2})\Delta_{F}^{2}(k+k')\]
+
+
+
+\section*{Seccion Eficaz}
+
+\[
+\dfrac{d\sigma}{d\Omega}=\dfrac{3}{64\pi^{2}s}\left\{ \dfrac{\left[s-(m'_{1}+m'_{2})^{2}\right]\left[s-(m'_{1}-m'_{2})^{2}\right]}{\left[s-(m_{1}+m_{2})^{2}\right]\left[s-(m_{1}-m_{2})^{2}\right]}\right\} ^{\dfrac{1}{2}}\vert\mathcal{M}_{fi}\vert^{2}\]
+
+
+con $s=4E_{p}^{2}$, donde $m'_{1}=m'_{2}$y $m_{1}=m_{2}$
+
+\[
+\dfrac{d\sigma}{d\Omega}=3\dfrac{\left(kv\lambda_{L}\right)^{2}}{64\pi^{2}s}\left\{ \dfrac{\left[s-(2m'_{1})^{2}\right]}{\left[s-(2m_{1})^{2}\right]}\right\} ^{\dfrac{1}{2}}(p^{\mu}p'_{\mu}-m^{2})\Delta_{F}^{2}(k+k')\]
+
+
+por conservacion del cuadrimomentun $p+p'=k+k'$ y las masas igules
+y para simplificar las particulas iniciales tienen el misom momentun
+tenemos que $2E_{p}=2E_{k}$ y $\vert\vec{p}\vert=\vert\text{\ensuremath{\vec{p}}}'\vert$
+
+entonces \[
+p^{\mu}p'_{\mu}=E_{p}^{2}-\vert p\vert^{2}=m_{H}^{2}\]
+
+
+\[
+\Delta_{F}(k+k')=\dfrac{1}{((k+k')^{2}-4m_{h}^{2})}=\dfrac{1}{2\left(kk'-m_{h}^{2}\right)}=\dfrac{1}{2(E_{k}^{2}-\vert k\vert^{2}-m_{h}^{2})}=\dfrac{1}{2(E_{p}^{2}-\vert p\vert^{2}-m_{h}^{2})}\]
+
+
+y nos deja 
+
+\[
+\dfrac{d\sigma}{d\Omega}=3\dfrac{\left(kv\lambda_{L}\right)^{2}}{64\pi^{2}s}\left\{ \dfrac{\left[s-(2m'_{1})^{2}\right]}{\left[s-(2m_{1})^{2}\right]}\right\} ^{\dfrac{1}{2}}\left[\dfrac{2E_{p}^{2}-m_{H}^{2}}{4(E_{p}^{2}-m_{h}^{2})}\right]^{2}\]
+
+
+y la seccion eficaz es \[
+\sigma=3\dfrac{\left(kv\lambda_{L}\right)^{2}}{64\pi s}\left\{ \dfrac{\left[s-(2m)^{2}\right]}{\left[s-(2m_{H})^{2}\right]}\right\} ^{\dfrac{1}{2}}\left[\dfrac{2E_{p}^{2}-m_{H}^{2}}{4(E_{p}^{2}-m_{h}^{2})}\right]^{2}=3\dfrac{\left(kv\lambda_{L}\right)^{2}}{64\pi s}\left\{ \dfrac{\left[s-(2m)^{2}\right]}{\left[s-(2m_{H})^{2}\right]}\right\} ^{\dfrac{1}{2}}\left[\dfrac{s/2-m_{H}^{2}}{(s-4m_{h}^{2})}\right]^{2}\]
+
+
+datos 
+
+$\lambda_{L}=0.1\,\,\,\,\,\,\,\,\, k=-\dfrac{m}{v}$
+
+$m_{h}=120\, GeV\,\,\,\,\,\,\,\,\,\,\, m_{H}=50GeV\,\,\,\,\,\,\,\,\, s=(1000GeV)^{2}\,\,\,\,\,\,\,\,\: m=4.3\text{GeV}\,\,\,\,\,\,\, v=246GeV$
+
+luego de poner todos eso numeros en su lugar
+
+$s=7.726888\times10^{-10}GeV^{-2}=0.030086184pb$
+
+
+\section*{CalcHep }
+
+$\sigma_{c}=3.48145\times10^{-5}pb$
+
+inexplicable!!!!!!!!
+
+\section{Copyright}
+\includegraphics[scale=0.5]{cc} Creative Commons Attribution-Share Alike 3.0 United States License.
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "qft_samples"
+%%% End: 
