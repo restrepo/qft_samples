@@ -27,6 +27,27 @@
 \newcommand{\ket}{\rangle}
 \newcommand{\bra}{\langle}
 \newcommand{\eq}[2]{\begin{equation} \label{eq#1} #2 \end{equation}}
+%comandos para cosas en QM
+\newcommand{\ketm}[1]{\left|#1\right\rangle}
+\newcommand{\bram}[2]{\left\langle#1\right|}
+\newcommand{\valprom}[1]{\left<#1\right>}
+\newcommand{\prodin}[2]{\left<#1\right|#2\left.\right>}
+\newcommand{\braket}[3]{\left<#1\right|#2\left|#3\right>}
+\newcommand{\conmu}[2]{\left[#1,#2\right]}
+\newcommand{\aconmu}[2]{\left\{#1,#2\right\}}
+
+%comandos varios
+\newcommand{\detott}[1]{\frac{d}{d#1}}
+\newcommand{\detot}[2]{\frac{d#1}{d#2}}
+\newcommand{\deparr}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\depar}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\tsr}[3]{{#1}_{#2}^{#3}}
+
+%abreaviación de comandos existentes
+\newcommand{\vtr}[1]{\boldsymbol{#1}}
+\newcommand{\vecun}[1]{\boldsymbol{\hat{e}_{#1}}}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\nn}{\nonumber}
 
 
 
@@ -70,15 +91,15 @@
 % $e^+ e^- \to e^- e^-$: Diego
 %\include{e-e-to_e-e-} 
 % $e^- e^+ \to \mu^+ \mu^-$: David Noreña
-%\include{e-e+to_mu+mu-}
+\include{eemumu}
 % $\mu^- \to e^- \bar{\nu}_e \nu_\mu$: Cristian
 % \include{mudecay}
 % Singlet dark matter: Isabel 0909.2799
 \include{sdm1}
 % Singlet dark matter: Isabel 0909.2799
 \include{sdm2}
-% Inert Dark matter I: Juan David 1011.1411
-%\include{idm1}
+% Singlet Dark matter I: Juan David 1011.1411
+\include{sdm3}
 % Inert Dark matter II: Jehison 1011.1411
 %\include{idm2}
 % Radiative see saw I: Alvaro 0808.3340
@@ -88,7 +109,7 @@
 % Radiative see saw III: 
 %\include{rss2}
 % zee model I: Andrés hep-ph/0604012
-%\include{rss2}
+\include{zee1}
 % zee model II:
 %\include{rss2}
 % THDM I:  Yubian hep-ph/0504050
